@@ -7,6 +7,7 @@ La aplicación fue desarrollada siguiendo una arquitectura RESTful, lo que permi
 - **Spring Boot**: Framework de Java para el desarrollo de aplicaciones basadas en Spring. Proporciona un servidor embebido (Tomcat) y configuración automática, lo que reduce el tiempo de desarrollo.
 - **Spring Web**: Para la creación de endpoints RESTful y el manejo de solicitudes HTTP.
 - **Java 17**: Versión de Java utilizada para el desarrollo, ya que es una versión LTS (Long-Term Support), lo que garantiza estabilidad y soporte a largo plazo.
+- **Docker**: Para empaquetar la aplicación en un contenedor, garantizando su portabilidad y consistencia en diferentes entornos.
 - **Maven**: Herramienta de gestión de dependencias y construcción del proyecto.
 
 ## Implementación de las Distintas Partes de la Solución
@@ -28,6 +29,20 @@ La aplicación fue desarrollada siguiendo una arquitectura RESTful, lo que permi
 ### Persistencia en Memoria
 - Los datos se almacenan en memoria utilizando estructuras de Java (`Map` y `List`), lo que elimina la necesidad de una base de datos externa.
 - Esto simplifica la implementación y es adecuado para una aplicación de prueba.
+
+### Despliegue en Contenedor
+- La aplicación se empaquetó en una imagen Docker, lo que permite su ejecución en cualquier entorno que soporte contenedores.
+- Se proporcionó un `Dockerfile` para facilitar el despliegue.
+
+### Instrucciones para crear y levantar la aplicación desde el Dockerfile.
+- Ingresar a la ruta del proyecto
+- Construir la Imagen Docker con el siguiente comando:
+
+`docker build -t blog-app .`
+
+- Ejecutar la Aplicación en un Contenedor con el siguiente comando:
+
+`docker run -p 8080:8080 blog-app`
 
 ## Recomendaciones
 - **Pruebas**: Se recomienda utilizar herramientas como Postman o `curl` para probar los endpoints de la API.
