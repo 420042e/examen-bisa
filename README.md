@@ -53,19 +53,69 @@ La aplicación fue desarrollada siguiendo una arquitectura RESTful, lo que permi
 ### Endpoints del proyecto
 - Se tienen los siguientes endpoints:
 
-Crear Blog
+1. Crear Blog (POST)
+
 `http://localhost:8080/blogs`
 
-Agregar comentario
+```json
+{
+    "titulo": "Mi primer blog",
+    "tema": "Tecnología",
+    "contenido": "Este es un blog sobre Javaa y Spring Boot.",
+    "periodicidad": "SEMANAL",
+    "permiteComentarios": true,
+    "autor": {
+        "nombres": "Juan",
+        "apellidoPaterno": "Pérez",
+        "apellidoMaterno": "Gómez",
+        "fechaNacimiento": "1990-01-01",
+        "paisResidencia": "México",
+        "email": "juan@example.com"
+    }
+}
+```
+
+2. Agregar comentario (POST)
+
 `http://localhost:8080/blogs/<id_blog>/comentarios`
 
-Obtener Blog
+```json
+{
+    "nombre": "Anaa",
+    "email": "ana@example.com",
+    "paisResidencia": "España",
+    "puntuacion": 9,
+    "comentario": "¡Me encantó este blog!"
+}
+```
+
+3. Obtener Blog (GET)
 `http://localhost:8080/blogs/<id_blog>`
 
-Actualizar Blog
+4. Actualizar Blog (PUT)
+
 `http://localhost:8080/blogs/<id_blog>`
 
-Obtener todos los Blogs
+```json
+{
+    "titulo": "Mi primer blog actualizado",
+    "tema": "Tecnología",
+    "contenido": "Este es un blog actualizado sobre Java y Spring Boot.",
+    "periodicidad": "SEMANAL",
+    "permiteComentarios": false,
+    "autor": {
+        "nombres": "Juan",
+        "apellidoPaterno": "Pérez",
+        "apellidoMaterno": "Gómez",
+        "fechaNacimiento": "1990-01-01",
+        "paisResidencia": "México",
+        "email": "juan@example.com"
+    }
+}
+```
+
+5. Obtener todos los Blogs (GET)
+
 `http://localhost:8080/blogs`
 
 ## Recomendaciones
