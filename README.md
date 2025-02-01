@@ -50,5 +50,23 @@ La aplicación fue desarrollada siguiendo una arquitectura RESTful, lo que permi
 
 `http://localhost:8080/swagger-ui/index.html`
 
+### Endpoints del proyecto
+- Se tienen los siguientes endpoints:
+
+Crear Blog
+`http://localhost:8080/blogs`
+
+Agregar comentario
+`http://localhost:8080/blogs/<id_blog>/comentarios`
+
+Obtener Blog
+`http://localhost:8080/blogs/<id_blog>`
+
+Actualizar Blog
+`http://localhost:8080/blogs/<id_blog>`
+
+Obtener todos los Blogs
+`http://localhost:8080/blogs`
+
 ## Recomendaciones
 - **Pruebas**: Se recomienda utilizar herramientas como Postman o `curl` para probar los endpoints de la API.
