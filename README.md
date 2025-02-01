@@ -9,6 +9,7 @@ La aplicación fue desarrollada siguiendo una arquitectura RESTful, lo que permi
 - **Java 17**: Versión de Java utilizada para el desarrollo, ya que es una versión LTS (Long-Term Support), lo que garantiza estabilidad y soporte a largo plazo.
 - **Docker**: Para empaquetar la aplicación en un contenedor, garantizando su portabilidad y consistencia en diferentes entornos.
 - **Maven**: Herramienta de gestión de dependencias y construcción del proyecto.
+- **Swagger**: Herramienta para la documentación del proyecto.
 
 ## Implementación de las Distintas Partes de la Solución
 
@@ -43,6 +44,11 @@ La aplicación fue desarrollada siguiendo una arquitectura RESTful, lo que permi
 - Ejecutar la Aplicación en un Contenedor con el siguiente comando:
 
 `docker run -p 8080:8080 blog-app`
+
+### Instrucciones para acceder a swagger
+- Ingresar a la ruta:
+
+`http://localhost:8080/swagger-ui/index.html`
 
 ## Recomendaciones
 - **Pruebas**: Se recomienda utilizar herramientas como Postman o `curl` para probar los endpoints de la API.
