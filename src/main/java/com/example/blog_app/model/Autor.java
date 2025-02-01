@@ -3,21 +3,12 @@ package com.example.blog_app.model;
 import java.time.LocalDate;
 
 public class Autor {
-    private String id;
     private String nombres;
     private String apellidoPaterno;
     private String apellidoMaterno;
     private LocalDate fechaNacimiento;
     private String paisResidencia;
     private String email;
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
 
     public String getNombres() {
         return nombres;

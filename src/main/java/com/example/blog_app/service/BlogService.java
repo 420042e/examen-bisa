@@ -32,8 +32,13 @@ public class BlogService {
             throw new BlogNoEncontradoException("Blog no encontrado");
         }
         Blog blogActual = blogs.get(id);
+        List<Comentario> comentariosExistentes = blogActual.getComentarios();
+        List<Blog> historicoVersiones = blogActual.getHistoricoVersiones();
+        
         blogActual.agregarVersion(new Blog(blogActual));
         blog.setId(id);
+        blog.setComentarios(comentariosExistentes);
+        blog.setHistoricoVersiones(historicoVersiones);
         blogs.put(id, blog);
         return blog;
     }
